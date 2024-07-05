@@ -2,6 +2,5 @@ streamlit==1.36.0
 pandas
 torch
 torchvision
-PIL
 cv2
 os
