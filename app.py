@@ -4,37 +4,25 @@ import torchvision
 import pandas as pd
 import numpy as np
 from PIL import Image
-import gdown
 import cv2
 import os
 
-# Function to download the model weights
-def download_model(url, output):
-    gdown.download(url, output, quiet=False)
-
 # Function to load the model
 def load_model(weights_path):
-    # Initialize the Faster R-CNN model with the specified number of classes
+    # Initialize the model
     model = torchvision.models.detection.ssd300_vgg16(pretrained=True)
     # Load the weights into the model
-    model.load_state_dict(torch.load(weights_path))
+    model.load_state_dict(torch.load(weights_path, map_location=torch.device('cuda' if torch.cuda.is_available() else 'cpu')))
+    # Move model to GPU if available
+    if torch.cuda.is_available():
+        model = model.cuda()
     model.eval()
     return model
-
-# URL and output path for the model weights
-url1 = 'https://drive.google.com/file/d/1Is2FFzddR-aFmxlobz5YGklJRTecN2fC/view?usp=drive_link'
-output1 = 'model.pth'
-
-# Download the model weights
-if not os.path.exists(output1):
-    with st.spinner('Downloading model weights...'):
-        download_model(url1, output1)
-        st.success('Model weights downloaded!')
 
 # Load the model
 with st.spinner('Loading Model Into Memory....'):
     try:
-        model = load_model(output1)
+        model = load_model("/content/gdrive/MyDrive/Kaggle/Copy of ssd_model_weights.pth")
         st.success("Model Loaded Successfully!")
     except Exception as e:
         st.error(f"Error loading model: {e}")
@@ -79,3 +67,5 @@ if img_file_buffer is not None:
         st.image(cv2.cvtColor(cv2_img, cv2.COLOR_BGR2RGB), caption='Processed Image.', use_column_width=True)
 
     prediction(cv2_img)
+
+st.text("This project is developed by Ankesh Ansh")
