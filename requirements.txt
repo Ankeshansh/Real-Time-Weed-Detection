@@ -4,4 +4,4 @@ numpy
 torch
 torchvision
 Pillow==9.4.0
-OpenCV==4.8.0
+opencv-python-headless
