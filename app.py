@@ -4,8 +4,15 @@ import torchvision
 import pandas as pd
 import numpy as np
 from PIL import Image
+import gdown
 import cv2
 import os
+
+# Download the model weights
+url1 = 'https://drive.google.com/file/d/1Is2FFzddR-aFmxlobz5YGklJRTecN2fC/view?usp=drive_link'
+output1 = 'Copy of ssd_model_weights.pth'
+
+gdown.download(url1, output1, quiet=False)
 
 # Function to load the model
 def load_model(weights_path):
@@ -22,7 +29,7 @@ def load_model(weights_path):
 # Load the model
 with st.spinner('Loading Model Into Memory....'):
     try:
-        model = load_model("/content/gdrive/MyDrive/Kaggle/Copy of ssd_model_weights.pth")
+        model = load_model(output1)
         st.success("Model Loaded Successfully!")
     except Exception as e:
         st.error(f"Error loading model: {e}")
