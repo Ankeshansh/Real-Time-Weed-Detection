@@ -9,7 +9,7 @@ import cv2
 import os
 
 # Download the model weights
-url1 = 'https://drive.google.com/file/d/1Is2FFzddR-aFmxlobz5YGklJRTecN2fC/view?usp=drive_link'
+url1 = 'https://drive.google.com/file/d/1yOPZyA14pBrInbM2jS63FX2J8lYpy0Sx/view?usp=drive_link'
 output1 = 'ssd_model_weights.pth'
 
 gdown.download(url1, output1, quiet=False)
