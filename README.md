@@ -4,23 +4,23 @@ This project focuses on real-time weed detection using deep learning models, inc
 
 🔗 **Live Demo**: [Weed Detection App](https://real-time-weed-detection-ahth9azxfnewlmqphufecz.streamlit.app/)
 
-## 🚀 Features  
+## Features  
 - **Deep Learning Models**: Utilizes Faster R-CNN, RetinaNet, and SSD for accurate weed detection.  
 - **Live Stream Detection**: Implements a real-time detection system using Google Colab's camera.  
 - **Web Deployment**: Deployed via **Streamlit** for easy accessibility.  
 - **Performance Metrics**: Compared models based on the **mean Dice coefficient (0.65)**.  
 
-## 📁 Dataset  
+## Dataset  
 - Images of different types of weeds and crops.  
 - Augmented dataset to improve model robustness.  
 
-## 🏗️ Model Pipeline  
+## Model Pipeline  
 1. **Data Preprocessing**: Normalization, augmentation, and resizing.  
 2. **Training**: Model trained on a labeled dataset with PyTorch.  
 3. **Evaluation**: Compared the performance of all three models.  
 4. **Deployment**: Integrated into a web-based application using Streamlit.
 
-## 📊 Model Performance  
+## Model Performance  
 
 | Model       | Mean Dice Coefficient |
 |------------|----------------------|
@@ -28,7 +28,7 @@ This project focuses on real-time weed detection using deep learning models, inc
 | RetinaNet   | 0.65 |
 | SSD         | 0.63 |
 
-## 📌 Installation  
+## Installation  
 Clone the repository and install dependencies:  
 ```bash
   git clone https://github.com/your-repo/real-time-weed-detection.git
