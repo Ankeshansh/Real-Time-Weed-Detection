@@ -22,10 +22,9 @@ This project focuses on real-time weed detection using deep learning models, inc
 
 ## 📌 Installation  
 Clone the repository and install dependencies:  
-
-git clone https://github.com/your-repo/real-time-weed-detection.git
-cd real-time-weed-detection
-pip install -r requirements.txt
+  git clone https://github.com/your-repo/real-time-weed-detection.git
+  cd real-time-weed-detection
+  pip install -r requirements.txt
 
 
 ## 📊 Model Performance  
