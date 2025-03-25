@@ -27,21 +27,11 @@ git clone https://github.com/your-repo/real-time-weed-detection.git
 cd real-time-weed-detection
 pip install -r requirements.txt
 
-📊 Results
-Model	Mean Dice Coefficient
-Faster R-CNN	0.67
-RetinaNet	0.65
-SSD	0.63
+## 📊 Model Performance  
 
-🤝 Contributing
-Feel free to fork this repository and submit a pull request for improvements!
+| Model       | Mean Dice Coefficient |
+|------------|----------------------|
+| Faster R-CNN | 0.67 |
+| RetinaNet   | 0.65 |
+| SSD         | 0.63 |
 
-📜 License
-This project is licensed under the MIT License.
-
-✨ Acknowledgments
-PyTorch for model training.
-
-Streamlit for web-based deployment.
-
-Google Colab for real-time execution.
